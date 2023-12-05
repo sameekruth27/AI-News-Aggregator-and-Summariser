@@ -39,7 +39,7 @@ export const Projects = () => {
       yesterdayTimestamp.setDate(yesterdayTimestamp.getDate() - 1);
       const timestamp = yesterdayTimestamp.getTime();
 
-      const response = await axios.get(`http://localhost:8000/api/news?timestamp=${timestamp}`);
+      const response = await axios.get(`https://minorproject-alpha.vercel.app/api/news?timestamp=${timestamp}`);
       console.log('API Response:', response.data);
 
       // Update the state in one go
@@ -54,7 +54,7 @@ export const Projects = () => {
   const handleBookmark = async (article) => {
     try {
       const userId = 'your_user_id'; // Replace with actual user ID
-      await axios.post('http://localhost:8000/api/bookmarks', { userId, article });
+      await axios.post('https://minorproject-alpha.vercel.app/api/bookmarks', { userId, article });
       alert('Bookmark saved successfully!');
       setBookmarkedArticles((prevBookmarked) => [...prevBookmarked, article.id]);
     } catch (error) {
