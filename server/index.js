@@ -42,7 +42,7 @@ const User = mongoose.model('User', {
   password: String,
   preferences:[String]
 });
-app.post('/register', async (req, res) => {
+app.post('https://minorproject-alpha.vercel.app//register', async (req, res) => {
   console.log(req.body);
   const { username, password,preferences } = req.body;
   console.log(req.body)
@@ -63,7 +63,7 @@ app.post('/register', async (req, res) => {
     res.status(500).send('Error registering user');
   }
 });
-app.post('/login', async (req, res) => {
+app.post('https://minorproject-alpha.vercel.app//login', async (req, res) => {
   const { username, password } = req.body;
 
   try {
@@ -94,7 +94,7 @@ app.post('/login', async (req, res) => {
   }
 });
 // API endpoint to fetch news based on the country (India)
-app.get('/api/news', async (req, res) => {
+app.get('https://minorproject-alpha.vercel.app//api/news', async (req, res) => {
   try {
     const apiKey = 'df6e9f5062fa45dba16a99e1827d11ea';
     const categories = ['business', 'entertainment', 'general', 'health', 'science', 'sports', 'technology'];
@@ -132,7 +132,7 @@ app.get('/api/news', async (req, res) => {
   }
 });
 
-app.get('/scrape', async (req, res) => {
+app.get('https://minorproject-alpha.vercel.app//scrape', async (req, res) => {
   const headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3',
   };
