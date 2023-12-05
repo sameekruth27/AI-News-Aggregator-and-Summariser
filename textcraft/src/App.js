@@ -9,6 +9,7 @@ import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 
 function App() {
+  axios.post("https://minorproject-alpha.vercel.app/")
   return (
     <div className="App">
       <NavBar />
