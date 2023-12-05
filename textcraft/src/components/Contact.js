@@ -48,7 +48,7 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText('Submitting...');
-    const url = isSignUp ? 'http://localhost:8000/register' : 'http://localhost:8000/login';
+    const url = isSignUp ? 'https://minorproject-alpha.vercel.app/register' : 'https://minorproject-alpha.vercel.app/login';
 
     try {
       const response = await fetch(url, {
